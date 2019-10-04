@@ -1,6 +1,6 @@
 # PokeBerries
 
-This is the final project for San Diego Java Programming II: Core Java Programming course.
+This is the final project for San Diego Extension Java Programming II: Core Java Programming course.
 
 
 
