@@ -30,7 +30,7 @@ public class BerryApiUtils {
 	public static String getBerryName(int berryId) throws IOException {
 		String berryName = "";
 		berryId++;
-		request = new URL("https://pokeapi.co/api/v2/berry/" + berryId);
+		request = new URL(ROOT_URL + berryId);
 		response = IOUtils.toString(request.openStream(), "UTF-8");
 		rootObject = new JSONObject(response);
 		berryName = rootObject.get("name").toString();
@@ -40,7 +40,7 @@ public class BerryApiUtils {
 	public static int getBerrySize(int berryId) throws IOException {
 		int berrySize;
 		berryId++;
-		request = new URL("https://pokeapi.co/api/v2/berry/" + berryId);
+		request = new URL(ROOT_URL + berryId);
 		response = IOUtils.toString(request.openStream(), "UTF-8");
 		rootObject = new JSONObject(response);
 		berrySize = Integer.valueOf(rootObject.get("size").toString());
@@ -50,7 +50,7 @@ public class BerryApiUtils {
 	public static int getBerryGrowthTime(int berryId) throws IOException {
 		int berryGrowthTime;
 		berryId++;
-		request = new URL("https://pokeapi.co/api/v2/berry/" + berryId);
+		request = new URL(ROOT_URL + berryId);
 		response = IOUtils.toString(request.openStream(), "UTF-8");
 		rootObject = new JSONObject(response);
 		berryGrowthTime = Integer.valueOf(rootObject.get("growth_time").toString());
@@ -58,9 +58,9 @@ public class BerryApiUtils {
 	}
 
 	public static BufferedImage getBerryImage(String berryName) throws MalformedURLException, IOException {
-		String link = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/" + berryName + "-berry.png";
-		BufferedImage img = ImageIO.read(new URL(link));
-		return img;
+		String imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/" + berryName + "-berry.png";
+		BufferedImage berryImg = ImageIO.read(new URL(imgUrl));
+		return berryImg;
 	}
 
 	public static Berry getLargestFastestGrowingBerry(ArrayList<Berry> berries) {

@@ -24,11 +24,11 @@ public class BerryGarden extends JFrame {
 
 	private static void startIt(ArrayList<Berry> berries) throws MalformedURLException, IOException {
 
-		JFrame frame = new JFrame("Final");
+		JFrame frame = new JFrame("Berry picker");
 		JPanel panel = new JPanel();
 		JLabel infoLabel = new JLabel(BerryApiUtils.getLargestFastestGrowingBerry(berries).toString(), SwingConstants.CENTER);
 		JLabel picLabel = new JLabel(new ImageIcon(BerryApiUtils.getBerryImage(BerryApiUtils.getLargestFastestGrowingBerry(berries).getBerryName())), SwingConstants.CENTER);
-		JButton button = new JButton("Get largest fastest growing berry");
+		JButton button = new JButton("Pick largest fastest growing berry");
 		infoLabel.setVisible(false);
 		picLabel.setVisible(false);
 		panel.add(button);
