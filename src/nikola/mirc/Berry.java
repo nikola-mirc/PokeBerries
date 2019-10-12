@@ -1,5 +1,9 @@
 package nikola.mirc;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+
 public class Berry {
 
 	private String berryName;
@@ -39,6 +43,12 @@ public class Berry {
 	@Override
 	public String toString() {
 		return "Name: " + this.berryName + " Size: " + this.berrySize + " Growth time: " + this.berryGrowthTime;
+	}
+
+	public InputStream getImage(String berryName) throws IOException {
+		URL imgUrl = new URL("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/" + berryName + "-berry.png");
+		return imgUrl.openStream();
+
 	}
 
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0"
+	prefWidth="320.0" xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="nikola.mirc.BerryController">
+	<children>
+		<ImageView fx:id="imageView" fitHeight="92.0"
+			fitWidth="115.0" layoutX="111.0" layoutY="141.0" pickOnBounds="true"
+			preserveRatio="true" />
+		<Button fx:id="randomButton" layoutX="173.0" layoutY="14.0"
+			mnemonicParsing="false" onAction="#getRandomBerry" prefHeight="62.0"
+			prefWidth="127.0" text="Get random berry" />
+		<Button fx:id="bestButton" layoutX="14.0" layoutY="14.0"
+			mnemonicParsing="false" onAction="#getBestBerry" prefHeight="62.0"
+			prefWidth="127.0" text="Get best berry" />
+		<TextField fx:id="textViewName" alignment="CENTER"
+			editable="false" layoutX="124.0" layoutY="97.0" prefHeight="25.0"
+			prefWidth="68.0" />
+		<TextField fx:id="textViewSize" alignment="CENTER"
+			editable="false" layoutX="124.0" layoutY="250.0" prefHeight="25.0"
+			prefWidth="68.0" />
+		<TextField fx:id="textViewGrowth" alignment="CENTER"
+			editable="false" layoutX="124.0" layoutY="288.0" prefHeight="25.0"
+			prefWidth="68.0" />
+		<TextField fx:id="textViewFirmness" alignment="CENTER"
+			editable="false" layoutX="124.0" layoutY="325.0" prefHeight="25.0"
+			prefWidth="68.0" />
+		<Text layoutX="60.0" layoutY="114.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Name:" />
+		<Text layoutX="66.0" layoutY="267.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Size:" />
+		<Text layoutX="43.0" layoutY="305.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Growth time:" />
+		<Text layoutX="52.0" layoutY="342.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Firmness:" />
+	</children>
+</Pane>
